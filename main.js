@@ -34,6 +34,8 @@ const spriteDimension = {};
 
 spriteImage.onload = function(){
 
+    spriteDimension.name = "me";
+
     spriteDimension.x = 336;
     spriteDimension.y = 480;
 
@@ -106,6 +108,16 @@ function drawSprite(){
         spriteDimension.x, spriteDimension.y,
         spriteDimension.scaledWidth/2, 
         spriteDimension.scaledHeigth/2
+    );
+
+    ctx.font = "bold 14px Arial";
+    ctx.fillStyle = "Black";
+    ctx.textAlign = "center";
+
+    ctx.fillText(
+        spriteDimension.name,
+        spriteDimension.x + spriteDimension.originalWidth,
+        spriteDimension.y + 5
     );
 }
 
